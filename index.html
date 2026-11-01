@@ -14,10 +14,10 @@
 <meta property="og:url" content="https://sunilmtma.github.io/">
 <meta property="og:image" content="https://sunilmtma.github.io/assets/img/photo.jpg">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2314202B'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='15' fill='%23F5F7F8'%3ESC%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231F5D8E'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='15' fill='%23F5F7F8'%3ESC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..600;1,8..60,400&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 <script type="application/ld+json">
 {
@@ -31,11 +31,6 @@
   "affiliation": [
     {"@type": "Organization", "name": "CESI LINEACT (UR 7527)"},
     {"@type": "CollegeOrUniversity", "name": "École Nationale Supérieure d'Arts et Métiers (ENSAM ParisTech)"}
-  ],
-  "alumniOf": [
-    {"@type": "CollegeOrUniversity", "name": "Université Bourgogne Europe"},
-    {"@type": "CollegeOrUniversity", "name": "Université Marie & Louis Pasteur"},
-    {"@type": "CollegeOrUniversity", "name": "Indian Institute of Science Education and Research (IISER) Pune"}
   ],
   "knowsAbout": ["Computer vision", "Robotics", "Digital twins", "Automation", "3D reconstruction", "Gaussian Splatting", "6D pose estimation"],
   "sameAs": [
@@ -53,15 +48,16 @@
 
 <header class="topbar">
   <div class="wrap topbar-inner">
-    <a class="wordmark" href="#top">Sunil Choudhary</a>
+    <a class="monogram" href="#top" aria-label="Back to top">SC</a>
     <nav aria-label="Sections">
       <ul class="nav">
         <li><a href="#research">Research</a></li>
         <li><a href="#news">News</a></li>
         <li><a href="#publications">Publications</a></li>
-        <li><a href="#background">Background</a></li>
         <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#reviewing">Reviewing</a></li>
         <li><a href="#talks">Talks</a></li>
+        <li><a href="#awards">Awards</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -71,47 +67,54 @@
 <main id="main">
 
 <!-- ============================================================ hero -->
-<section class="hero wrap" id="top" aria-labelledby="name">
-  <div class="hero-text">
-    <img class="portrait" src="assets/img/photo.jpg" alt="Portrait of Sunil Choudhary" width="112" height="112">
-    <h1 id="name">Sunil Choudhary</h1>
-    <p class="role">PhD candidate in Computer Science<br>
-      <a href="https://lineact.cesi.fr/en/">CESI LINEACT</a> and <a href="https://artsetmetiers.fr/en">ENSAM ParisTech</a>, Rouen, France</p>
-    <p class="lede">I want to put robots to work on real industrial tasks, and to build the digital twins where those robots are simulated and tested first. My research brings together computer vision, robotics, digital twins and automation.</p>
-    <p class="status"><span class="status-dot" aria-hidden="true"></span>Defending my PhD in February 2027. Open to postdoctoral and research scientist positions from March 2027.</p>
+<section class="hero" id="top" aria-labelledby="name">
+  <div class="wrap hero-inner">
+    <div class="hero-text">
+      <div class="identity">
+        <img class="portrait" src="assets/img/photo.jpg" alt="Portrait of Sunil Choudhary" width="104" height="104">
+        <div class="identity-text">
+          <h1 id="name">Sunil Choudhary</h1>
+          <p class="role">PhD candidate in Computer Science<br>
+            <a href="https://lineact.cesi.fr/en/">CESI LINEACT</a> and <a href="https://artsetmetiers.fr/en">ENSAM ParisTech</a>, Rouen, France</p>
+        </div>
+      </div>
 
-    <ul class="links" aria-label="Profiles and contact">
-      <li><a href="mailto:sunilmtma@gmail.com"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Email</a></li>
-      <li><a href="https://scholar.google.com/citations?user=9mLvw88AAAAJ"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 1.5 10 12 17l10.5-7z" fill="currentColor"/><path d="M6 13v4.2c0 1.5 2.7 2.8 6 2.8s6-1.3 6-2.8V13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Google Scholar</a></li>
-      <li><a href="https://orcid.org/0009-0001-5705-5809"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><g fill="var(--bg)"><rect x="7" y="10" width="2" height="7.5"/><circle cx="8" cy="7.4" r="1.2"/><path d="M11 6.5h3.2a5.5 5.5 0 0 1 0 11H11zm2 2v7h1.1a3.5 3.5 0 0 0 0-7z"/></g></svg>ORCID</a></li>
-      <li><a href="https://www.linkedin.com/in/sunil-choudhary-5aa958202/"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor"/><g fill="var(--bg)"><rect x="5.5" y="9.5" width="3" height="9"/><circle cx="7" cy="6.6" r="1.7"/><path d="M10.5 9.5h2.9v1.3c.5-.9 1.6-1.5 3-1.5 2.4 0 3.1 1.5 3.1 3.9v5.3h-3v-4.7c0-1.1-.3-1.9-1.4-1.9s-1.6.8-1.6 1.9v4.7h-3z"/></g></svg>LinkedIn</a></li>
-      <li><a href="https://github.com/sunilmtma"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5a10.5 10.5 0 0 0-3.3 20.5c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.3-3.5-1.3-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.5 1.1 3.1.9.1-.7.4-1.1.7-1.4-2.3-.3-4.8-1.2-4.8-5.2 0-1.1.4-2.1 1.1-2.8-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8.7.7 1.1 1.7 1.1 2.8 0 4-2.5 4.9-4.8 5.2.4.3.7 1 .7 1.9v2.9c0 .3.2.6.7.5A10.5 10.5 0 0 0 12 1.5"/></svg>GitHub</a></li>
-    </ul>
-  </div>
+      <p class="lede">I want to put robots to work on real industrial tasks, and to build the digital twins where those robots are simulated and tested first. My research brings together <b>computer vision</b>, <b>robotics</b>, <b>digital twins</b> and <b>automation</b>.</p>
 
-  <figure class="twin">
-    <div class="twin-stage">
-      <canvas id="twin-canvas" role="img" aria-label="Animated robot cell with a conveyor, a robot arm and a pallet, shown at four stages of a digital twin: a 3D model, a live connected copy, a simulation of candidate motions, and a camera-guided robot that adapts to each part."></canvas>
-      <p class="twin-readout" id="twin-readout" aria-hidden="true">Geometry only, no live data</p>
+      <ul class="links" aria-label="Profiles and contact">
+        <li><a href="mailto:sunilmtma@gmail.com"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Email</a></li>
+        <li><a href="https://scholar.google.com/citations?user=9mLvw88AAAAJ"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3 1.5 10 12 17l10.5-7z" fill="currentColor"/><path d="M6 13v4.2c0 1.5 2.7 2.8 6 2.8s6-1.3 6-2.8V13" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Google Scholar</a></li>
+        <li><a href="https://orcid.org/0009-0001-5705-5809"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="currentColor"/><g fill="var(--surface)"><rect x="7" y="10" width="2" height="7.5"/><circle cx="8" cy="7.4" r="1.2"/><path d="M11 6.5h3.2a5.5 5.5 0 0 1 0 11H11zm2 2v7h1.1a3.5 3.5 0 0 0 0-7z"/></g></svg>ORCID</a></li>
+        <li><a href="https://www.linkedin.com/in/sunil-choudhary-5aa958202/"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="3" fill="currentColor"/><g fill="var(--surface)"><rect x="5.5" y="9.5" width="3" height="9"/><circle cx="7" cy="6.6" r="1.7"/><path d="M10.5 9.5h2.9v1.3c.5-.9 1.6-1.5 3-1.5 2.4 0 3.1 1.5 3.1 3.9v5.3h-3v-4.7c0-1.1-.3-1.9-1.4-1.9s-1.6.8-1.6 1.9v4.7h-3z"/></g></svg>LinkedIn</a></li>
+        <li><a href="https://github.com/sunilmtma"><svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5a10.5 10.5 0 0 0-3.3 20.5c.5.1.7-.2.7-.5v-1.9c-2.9.6-3.5-1.3-3.5-1.3-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.6.1-.6 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.5 1.1 3.1.9.1-.7.4-1.1.7-1.4-2.3-.3-4.8-1.2-4.8-5.2 0-1.1.4-2.1 1.1-2.8-.1-.3-.5-1.4.1-2.8 0 0 .9-.3 2.9 1.1a10 10 0 0 1 5.2 0c2-1.4 2.9-1.1 2.9-1.1.6 1.4.2 2.5.1 2.8.7.7 1.1 1.7 1.1 2.8 0 4-2.5 4.9-4.8 5.2.4.3.7 1 .7 1.9v2.9c0 .3.2.6.7.5A10.5 10.5 0 0 0 12 1.5"/></svg>GitHub</a></li>
+      </ul>
     </div>
-    <ol class="twin-steps" aria-label="Stages of a digital twin">
-      <li><button type="button" class="twin-step" aria-pressed="true"><span class="n">1</span>Model</button></li>
-      <li><button type="button" class="twin-step" aria-pressed="false"><span class="n">2</span>Connect</button></li>
-      <li><button type="button" class="twin-step" aria-pressed="false"><span class="n">3</span>Simulate</button></li>
-      <li><button type="button" class="twin-step" aria-pressed="false"><span class="n">4</span>Adapt</button></li>
-    </ol>
-    <figcaption>
-      <span class="twin-desc" id="twin-desc" aria-live="polite">A 3D model of a robot cell. It has the right geometry, but no connection to the real machine.</span>
-      <span class="twin-note">How a digital twin grows, from a static model to a copy that senses, simulates and decides.</span>
-    </figcaption>
-  </figure>
+
+    <figure class="twin">
+      <div class="twin-stage">
+        <canvas id="twin-canvas" role="img" aria-label="Animated robot cell with a conveyor, a robot arm and a pallet, shown at four stages of a digital twin: a 3D model, a live connected copy, a simulation of candidate motions, and a camera-guided robot that adapts to each part."></canvas>
+        <p class="twin-badge" id="twin-badge" aria-hidden="true"><span class="dot"></span><span class="txt">Static model</span></p>
+        <p class="twin-readout" id="twin-readout" aria-hidden="true">Geometry only · no live data</p>
+      </div>
+      <ol class="twin-steps" aria-label="Stages of a digital twin">
+        <li><button type="button" class="twin-step" aria-pressed="true"><span class="n">1</span>Model</button></li>
+        <li><button type="button" class="twin-step" aria-pressed="false"><span class="n">2</span>Connect</button></li>
+        <li><button type="button" class="twin-step" aria-pressed="false"><span class="n">3</span>Simulate</button></li>
+        <li><button type="button" class="twin-step" aria-pressed="false"><span class="n">4</span>Adapt</button></li>
+      </ol>
+      <figcaption>
+        <span class="twin-desc" id="twin-desc" aria-live="polite">A 3D model of a robot cell. It has the right geometry, but no connection to the real machine.</span>
+        <span class="twin-note">How a digital twin grows, from a static model to a copy that senses, simulates and decides.</span>
+      </figcaption>
+    </figure>
+  </div>
 </section>
 
 <!-- ============================================================ research -->
 <section class="block wrap" id="research" aria-labelledby="h-research">
   <h2 id="h-research">Research</h2>
   <div class="block-body">
-    <p class="prose">My PhD thesis, <em>6D Camera Pose Refinement and 3D Reconstruction via a Radiance Field-Based Approach: an industrial perspective</em>, is supervised by Yohan Dupuis, Vincent Havard and Nicolas Ragot. I built and released the first paired physical/digital-twin industrial RGB-D dataset, recorded with a stereo camera and a 16-camera OptiTrack motion-capture rig for millimetre-accurate ground truth and replayed along the identical trajectory in a Unity digital twin. On it I benchmark Structure-from-Motion back-ends and Gaussian Splatting variants across both domains, and I develop hybrid pipelines that replace part of the real data with synthetic views.</p>
+    <p class="prose">My PhD thesis, <em>6D Camera Pose Refinement and 3D Reconstruction via a Radiance Field-Based Approach: an industrial perspective</em>, is supervised by <a href="https://scholar.google.com/citations?user=qirM8SAAAAAJ">Yohan Dupuis</a>, <a href="https://scholar.google.com/citations?user=8cdy5n8AAAAJ">Vincent Havard</a> and <a href="https://scholar.google.com/citations?user=XOJcjtEAAAAJ">Nicolas Ragot</a>. I built and released the first paired physical/digital-twin industrial RGB-D dataset, recorded with a stereo camera and a 16-camera OptiTrack motion-capture rig for millimetre-accurate ground truth and replayed along the identical trajectory in a Unity digital twin. On it I benchmark Structure-from-Motion back-ends and Gaussian Splatting variants across both domains, and I develop hybrid pipelines that replace part of the real data with synthetic views.</p>
 
     <ul class="tags" aria-label="Research interests">
       <li>Computer vision</li><li>Robotics</li><li>Digital twins</li><li>Automation</li>
@@ -119,11 +122,13 @@
 
     <div class="projects">
       <article class="project">
+        <p class="project-kicker">France 2030 · Normandy region</p>
         <h3>FUSION</h3>
         <p class="project-sub">Framework for Universal Software Integration in OpeN robotics</p>
         <p>France 2030 “i-Démo régionalisé” project with the Normandy region and industrial partners Assystem, Orano and Conscience Robotics. It integrates AI and extended reality into robotics; my part is 3D reconstruction and 6D camera pose estimation in industrial environments. It funds my PhD.</p>
       </article>
       <article class="project">
+        <p class="project-kicker">PHC Balaton · Campus France</p>
         <h3>REMOTED</h3>
         <p class="project-sub">Robotic EnvironMent hybridizatiOn rendering based on data-efficient radiance field TEchnologies and Digital twin</p>
         <p>French–Hungarian PHC Balaton project (52934RC, Campus France) with ELTE University, Budapest, on data-efficient hybrid 3D reconstruction for industrial sites where real data is scarce. I am CESI's collaborator on it and have made two research visits to Budapest.</p>
@@ -141,7 +146,7 @@
       <li><time datetime="2026-06">Jun 2026</time><p>Released the <a href="https://zenodo.org/records/20830059">Physical and Digital Twin Industrial RGB-D dataset</a> on Zenodo, with a <a href="https://lineact-valo.gitlab.io/fusion_project/dataset_tools/">project page</a> and <a href="https://gitlab.com/lineact-valo/fusion_project/dataset_tools">tools</a>.</p></li>
       <li><time datetime="2026-06">Jun 2026</time><p>One-week REMOTED research visit to ELTE University and the Intelligent Robotics Fair 2026 at the Bosch Innovation Campus, Budapest.</p></li>
       <li><time datetime="2026">2026</time><p>“Mind the Domain Gap” published at the ICPR 2026 MVI2 Workshop, Lyon.</p></li>
-      <li><time datetime="2026-01">Jan 2026</time><p>Started teaching Deep Learning and AI Ethics, and Machine Learning and AI, at CESI School of Engineering.</p></li>
+      <li><time datetime="2026-01">Jan 2026</time><p>Started teaching Deep Learning and AI Ethics, and Machine Learning and AI Ethics, at CESI School of Engineering.</p></li>
       <li><time datetime="2025-10">Oct 2025</time><p>Presented our Gaussian Splatting pose-refinement paper at IEEE IECON 2025 in Madrid, and gave a research talk at the NIPG Seminar, ELTE University.</p></li>
       <li><time datetime="2025">2025</time><p>Microrobot orientation estimation paper published in <em>Robotica</em> (Cambridge University Press).</p></li>
     </ol>
@@ -241,7 +246,7 @@
 
     <h3 class="pubs-group">Under review</h3>
     <ol class="pubs">
-      <li class="pub">
+      <li class="pub pub-review">
         <div class="pub-meta"><span class="kind kind-review">Submitted</span><span class="pub-state">Not yet published</span></div>
         <h4 class="pub-title">Exploring the Physical and Digital Domain Gap in 3D Reconstruction: A Benchmark of Radiance Field Rendering Techniques on Paired Industrial Twins</h4>
         <p class="pub-authors"><b>Sunil Choudhary</b>, Mickyas Tamiru Asfaw, Nicolas Ragot, Kristian Fenech, Aristide Laignel, Aron Fothi, Gabor Baranyi, Vincent Havard, Yohan Dupuis</p>
@@ -251,45 +256,69 @@
   </div>
 </section>
 
-<!-- ============================================================ background -->
-<section class="block wrap" id="background" aria-labelledby="h-bg">
-  <h2 id="h-bg">Background</h2>
-  <div class="block-body">
-    <p class="prose">Since March 2024 I have been a doctoral researcher at the CESI LINEACT laboratory in Rouen, enrolled at ENSAM ParisTech (doctoral school ED SMI 432), working on computer vision, AI and robotics.</p>
-    <p class="prose">Before that, I did my master's thesis internship at ISIR, Sorbonne University, with Sinan Haliyo, Ferhat Sadak and Edison Gerena. I estimated the 3D orientation of optical microrobots from the microscope image stream, with applications to in vitro fertilisation. The work was published in <i>Robotica</i> and fed into the early stage of MovaLife, a microrobotics start-up.</p>
-    <p class="prose">My training started in mathematics. I hold a Master in Artificial Intelligence (M2 Santé-AI) from Université Bourgogne Europe, a Master in Mathematical Physics (M2 Math4Phys) from Université Marie &amp; Louis Pasteur in Dijon, and a four-year Bachelor of Science in Mathematics from IISER Pune, India.</p>
-
-    <ol class="milestones" aria-label="Positions and degrees">
-      <li><span class="m-year">2024 – 2027</span><span class="m-what">PhD in Computer Science, ENSAM ParisTech and CESI LINEACT</span></li>
-      <li><span class="m-year">2023</span><span class="m-what">Master in Artificial Intelligence, Université Bourgogne Europe, with an internship at ISIR, Sorbonne University</span></li>
-      <li><span class="m-year">2020</span><span class="m-what">Master in Mathematical Physics, Université Marie &amp; Louis Pasteur</span></li>
-      <li><span class="m-year">2019</span><span class="m-what">Bachelor of Science in Mathematics, IISER Pune</span></li>
-    </ol>
-  </div>
-</section>
-
 <!-- ============================================================ teaching -->
 <section class="block wrap" id="teaching" aria-labelledby="h-teach">
   <h2 id="h-teach">Teaching and mentoring</h2>
   <div class="block-body">
-    <p class="prose">In 2026 I taught two courses at CESI School of Engineering in Rouen: <b>Deep Learning and AI Ethics</b> (45 hours, second-year master's students) and <b>Machine Learning and AI</b> (15 hours, fourth-year engineering students). The workshops covered neural network architectures, regression, classification and hyperparameter tuning on medical data, along with AI ethics and research integrity.</p>
-    <p class="prose">I also supervised two student projects on Gaussian Splatting:</p>
-    <ul class="plain">
-      <li><i>Hybrid Reconstruction using Real and Synthetic Images of Industrial Objects via 3D Gaussian Splatting</i>, a master's thesis internship (April to August 2026). It showed how far CAD-derived synthetic views can replace real acquisitions.</li>
-      <li><i>Benchmarking 3D Gaussian Splatting Techniques in Industry and Its Real Use Cases</i>, a master's group project with three students (January to April 2026).</li>
-    </ul>
+    <div class="duo">
+      <article class="panel">
+        <h3>Teaching</h3>
+        <p class="panel-sub">CESI School of Engineering, Rouen · 2026</p>
+        <ul class="items">
+          <li>
+            <p class="item-title">Deep Learning and AI Ethics</p>
+            <p class="item-meta"><span class="chip">45 h</span>Second-year master's students</p>
+          </li>
+          <li>
+            <p class="item-title">Machine Learning and AI Ethics</p>
+            <p class="item-meta"><span class="chip">15 h</span>Fourth-year engineering students</p>
+          </li>
+        </ul>
+        <p class="panel-note">Workshops on neural network architectures, regression, classification and hyperparameter tuning on medical data, along with AI ethics and research integrity.</p>
+      </article>
+
+      <article class="panel">
+        <h3>Supervision</h3>
+        <p class="panel-sub">Student projects on Gaussian Splatting · 2026</p>
+        <ul class="items">
+          <li>
+            <p class="item-title">Hybrid Reconstruction using Real and Synthetic Images of Industrial Objects via 3D Gaussian Splatting</p>
+            <p class="item-meta"><span class="chip">Apr – Aug</span>Master's thesis internship. It showed how far CAD-derived synthetic views can replace real acquisitions.</p>
+          </li>
+          <li>
+            <p class="item-title">Benchmarking 3D Gaussian Splatting Techniques in Industry and Its Real Use Cases</p>
+            <p class="item-meta"><span class="chip">Jan – Apr</span>Master's group project with three students.</p>
+          </li>
+        </ul>
+      </article>
+    </div>
   </div>
 </section>
 
-<!-- ============================================================ service -->
-<section class="block wrap" id="service" aria-labelledby="h-service">
-  <h2 id="h-service">Reviewing</h2>
+<!-- ============================================================ reviewing -->
+<section class="block wrap" id="reviewing" aria-labelledby="h-review">
+  <h2 id="h-review">Reviewing</h2>
   <div class="block-body">
-    <p class="prose">I review papers for:</p>
-    <ul class="plain">
-      <li><i>Automation in Construction</i> (Elsevier)</li>
-      <li>ICPR 2026, 28th International Conference on Pattern Recognition, Lyon</li>
-      <li>Intelligent Robotics Fair 2026, Budapest</li>
+    <p class="prose">I reviewed papers for:</p>
+    <ul class="venues">
+      <li><a href="https://www.sciencedirect.com/journal/automation-in-construction">
+        <span class="venue-kind">Journal</span>
+        <span class="venue-name">Automation in Construction</span>
+        <span class="venue-sub">Elsevier</span>
+        <svg class="venue-arrow" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a></li>
+      <li><a href="https://iapr.org/icpr2026">
+        <span class="venue-kind">Conference</span>
+        <span class="venue-name">ICPR 2026</span>
+        <span class="venue-sub">28th International Conference on Pattern Recognition, Lyon</span>
+        <svg class="venue-arrow" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a></li>
+      <li><a href="https://introbfair26.inf.elte.hu/">
+        <span class="venue-kind">Conference</span>
+        <span class="venue-name">Intelligent Robotics Fair 2026</span>
+        <span class="venue-sub">Budapest</span>
+        <svg class="venue-arrow" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a></li>
     </ul>
   </div>
 </section>
@@ -319,7 +348,8 @@
   <h2 id="h-awards">Fellowships and awards</h2>
   <div class="block-body">
     <ol class="dated">
-      <li><time datetime="2020">2020</time><p><b>ISITE-BFC Fellowship</b> for master's study in France (€5,555)</p></li>
+      <li><time datetime="2024">2024</time><p><b>REMOTED research travel grant</b>, PHC Balaton, Campus France</p></li>
+      <li><time datetime="2019">2019</time><p><b>ISITE-BFC Fellowship</b> for master's study in France (€5,555)</p></li>
       <li><time datetime="2019">2019</time><p><b>Junior Research Fellowship</b>, CSIR-NET, All India Rank 149: a five-year fellowship for a PhD in Mathematics in India</p></li>
       <li><time datetime="2018">2018</time><p><b>IIT Bombay Research Internship Award</b>, six-month funded research internship</p></li>
       <li><time datetime="2015">2015</time><p><b>INSPIRE Fellowship</b>, Government of India, for the top 1% of candidates nationally in the natural and basic sciences</p></li>
@@ -329,19 +359,31 @@
 </section>
 
 <!-- ============================================================ contact -->
-<section class="block wrap contact" id="contact" aria-labelledby="h-contact">
+<section class="block wrap" id="contact" aria-labelledby="h-contact">
   <h2 id="h-contact">Contact</h2>
   <div class="block-body">
-    <p class="prose">I'm happy to talk about industrial robotics, digital twins, the dataset, or positions starting in 2027.</p>
-    <p class="email-line"><a href="mailto:sunilmtma@gmail.com">sunilmtma@gmail.com</a><button type="button" class="copy" data-copy="sunilmtma@gmail.com">Copy</button></p>
-    <p class="detail">CESI LINEACT, Rouen, France</p>
+    <p class="prose">I'm happy to talk about industrial robotics, digital twins or the dataset.</p>
+    <div class="contact-card">
+      <p class="contact-row">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m3.5 6 8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        <a href="mailto:sunilmtma@gmail.com">sunilmtma@gmail.com</a>
+        <button type="button" class="copy" data-copy="sunilmtma@gmail.com">Copy</button>
+      </p>
+      <p class="contact-row muted">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 21s-6.5-6.1-6.5-11a6.5 6.5 0 0 1 13 0c0 4.9-6.5 11-6.5 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+        CESI LINEACT, Rouen, France
+      </p>
+    </div>
   </div>
 </section>
 
 </main>
 
-<footer class="footer wrap">
-  <p>© 2026 Sunil Choudhary. Last updated November 2026.</p>
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© 2026 Sunil Choudhary</p>
+    <p>Last updated November 2026</p>
+  </div>
 </footer>
 
 <script src="assets/js/main.js" defer></script>
