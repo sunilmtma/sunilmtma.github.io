@@ -1,16 +1,16 @@
-/* Layout: a CV-style hanging grid. Section titles sit in a narrow left column and
-   dates in a fixed gutter, so the page scans like an academic CV. The one bold
-   element is the hero figure: an interactive physical-vs-digital twin point cloud. */
+/* Layout: section titles hang in a narrow left column with the content beside
+   them. The one bold element is the hero figure: a robot cell that grows through
+   the four stages of a digital twin. */
 :root {
   --bg: #F4F6F7;          /* cool paper */
   --surface: #FFFFFF;
   --ink: #15212C;         /* deep slate */
   --muted: #56636F;
   --rule: #D8DFE4;
-  --accent: #1F5D8E;      /* digital twin: cobalt */
-  --phys: #A8740F;        /* physical capture: ochre */
+  --accent: #1F5D8E;      /* twin model and simulation: cobalt */
+  --signal: #A8740F;      /* live data, sensors, parts: ochre */
   --accent-wash: #E3EDF5;
-  --phys-wash: #F5ECD9;
+  --signal-wash: #F5ECD9;
 
   --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
   --font-ui: "Archivo", "Helvetica Neue", Arial, sans-serif;
@@ -30,13 +30,13 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --bg: #0E161D; --surface: #15202A; --ink: #E3E9ED; --muted: #97A5B1; --rule: #26343F;
-    --accent: #7AB0DC; --phys: #DDA84A; --accent-wash: #17293A; --phys-wash: #2B2414;
+    --accent: #7AB0DC; --signal: #DDA84A; --accent-wash: #17293A; --signal-wash: #2B2414;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --bg: #0E161D; --surface: #15202A; --ink: #E3E9ED; --muted: #97A5B1; --rule: #26343F;
-  --accent: #7AB0DC; --phys: #DDA84A; --accent-wash: #17293A; --phys-wash: #2B2414;
+  --accent: #7AB0DC; --signal: #DDA84A; --accent-wash: #17293A; --signal-wash: #2B2414;
   color-scheme: dark;
 }
 
@@ -125,8 +125,8 @@ body::before {
   font-size: var(--step--1); color: var(--ink); max-width: 40em;
 }
 .status-dot {
-  flex: none; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--phys);
-  transform: translateY(-0.05rem); box-shadow: 0 0 0 4px var(--phys-wash);
+  flex: none; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--signal);
+  transform: translateY(-0.05rem); box-shadow: 0 0 0 4px var(--signal-wash);
 }
 
 .links { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.25rem; }
@@ -138,32 +138,46 @@ body::before {
 }
 .links a:hover { border-color: var(--accent); color: var(--accent); }
 .links svg { width: 1rem; height: 1rem; flex: none; }
-.links .cv { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-.links .cv:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
-
 /* twin figure */
-.twin { margin: 0; min-width: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+.twin { margin: 0; min-width: 0; display: flex; flex-direction: column; gap: 0.85rem; }
 .twin-stage {
-  position: relative; aspect-ratio: 5 / 4; max-width: 100%;
+  position: relative; aspect-ratio: 3 / 2; max-width: 100%;
   background: var(--surface); border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden;
 }
-#twin-canvas { width: 100%; height: 100%; display: block; cursor: grab; touch-action: pan-y; }
-#twin-canvas:active { cursor: grabbing; }
-.twin-toggle {
-  position: absolute; left: 0.75rem; bottom: 0.75rem; display: flex; gap: 0.25rem;
-  padding: 0.25rem; border-radius: 999px; background: color-mix(in srgb, var(--bg) 90%, transparent);
-  border: 1px solid var(--rule);
+#twin-canvas { width: 100%; height: 100%; display: block; }
+.twin-readout {
+  position: absolute; left: 0.75rem; top: 0.75rem; right: 0.75rem;
+  font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: pre;
+  overflow: hidden; text-overflow: ellipsis;
 }
-.twin-toggle button {
-  font: 500 var(--step--1)/1 var(--font-ui); color: var(--muted);
-  display: inline-flex; align-items: center; gap: 0.4rem;
-  padding: 0.45rem 0.75rem; border: 0; border-radius: 999px; background: transparent; cursor: pointer;
+.twin-steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.4rem; }
+.twin-step {
+  position: relative; width: 100%; overflow: hidden;
+  display: flex; align-items: center; gap: 0.45rem;
+  padding: 0.55rem 0.6rem; border: 1px solid var(--rule); border-radius: 8px;
+  background: var(--surface); color: var(--muted); cursor: pointer;
+  font: 500 var(--step--1)/1.2 var(--font-ui); text-align: left;
 }
-.twin-toggle button[aria-pressed="true"] { background: var(--surface); color: var(--ink); box-shadow: 0 0 0 1px var(--rule); }
-.swatch { width: 0.6rem; height: 0.6rem; border-radius: 50%; }
-.swatch-phys { background: var(--phys); }
-.swatch-dig { background: var(--accent); }
-.twin figcaption { font-family: var(--font-text); font-size: var(--step--1); color: var(--muted); line-height: 1.5; max-width: 34em; }
+.twin-step .n {
+  flex: none; display: inline-grid; place-items: center; width: 1.35rem; height: 1.35rem; border-radius: 50%;
+  border: 1px solid var(--rule); font-size: 0.75rem; font-variant-numeric: tabular-nums;
+}
+.twin-step:hover { color: var(--ink); border-color: var(--accent); }
+.twin-step[aria-pressed="true"] { color: var(--ink); border-color: var(--accent); }
+.twin-step[aria-pressed="true"] .n { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+/* progress bar: fills while the stage plays on its own */
+.twin-step::after {
+  content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%;
+  background: var(--accent); transform: scaleX(0); transform-origin: left;
+}
+.twin:not(.is-manual) .twin-step.is-active::after { animation: stepfill 6s linear forwards; }
+@keyframes stepfill { to { transform: scaleX(1); } }
+.twin figcaption { display: flex; flex-direction: column; gap: 0.35rem; max-width: 36em; }
+.twin-desc { font-size: 0.9375rem; color: var(--ink); line-height: 1.5; min-height: 3em; }
+.twin-note { font-family: var(--font-text); font-size: var(--step--1); color: var(--muted); line-height: 1.5; }
+@media (max-width: 30rem) {
+  .twin-step { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
+}
 
 @media (max-width: 55rem) {
   .hero { grid-template-columns: minmax(0, 1fr); gap: 2.5rem; padding-block: 2.5rem 3rem; }
@@ -214,26 +228,36 @@ body::before {
 .dated li:last-child { border-bottom: 0; }
 .dated time { font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 0.1rem; white-space: nowrap; }
 
-/* timeline: experience, education */
-.timeline { display: flex; flex-direction: column; gap: 2rem; }
-.timeline > li { display: grid; grid-template-columns: 9.5rem minmax(0, 1fr); gap: 1rem; }
-.timeline .when { font-size: var(--step--1); color: var(--muted); font-variant-numeric: tabular-nums; padding-top: 0.2rem; }
-.timeline > li > div { display: flex; flex-direction: column; gap: 0.35rem; min-width: 0; }
-.timeline h3 { font-size: var(--step-1); font-weight: 600; line-height: 1.35; }
-.where { color: var(--accent); font-size: 0.9375rem; }
-.points { display: flex; flex-direction: column; gap: 0.4rem; margin-top: 0.35rem; }
-.points li { position: relative; padding-left: 1.1rem; font-size: 0.9375rem; line-height: 1.6; color: var(--ink); }
-.points li::before {
-  content: ""; position: absolute; left: 0; top: 0.62em; width: 0.4rem; height: 0.4rem;
-  border: 1.5px solid var(--muted); border-radius: 50%;
-}
 @media (max-width: 34rem) {
-  .timeline > li { grid-template-columns: minmax(0, 1fr); gap: 0.25rem; }
   .dated li { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
 }
 
+/* background: a compact line of milestones under the prose */
+.milestones {
+  display: flex; flex-direction: column; gap: 0.6rem;
+  padding: 1.1rem 1.25rem; border: 1px solid var(--rule); border-radius: var(--radius); background: var(--surface);
+}
+.milestones li { display: grid; grid-template-columns: 6.5rem minmax(0, 1fr); gap: 1rem; font-size: 0.9375rem; }
+.m-year { color: var(--muted); font-variant-numeric: tabular-nums; }
+@media (max-width: 34rem) {
+  .milestones li { grid-template-columns: minmax(0, 1fr); gap: 0.1rem; }
+}
+
+/* plain prose lists: teaching, reviewing */
+.plain { display: flex; flex-direction: column; gap: 0.5rem; max-width: 40em; margin-top: -0.75rem; }
+.plain li { position: relative; padding-left: 1.1rem; font-family: var(--font-text); font-size: 1.0625rem; line-height: 1.6; }
+.plain li::before {
+  content: ""; position: absolute; left: 0; top: 0.68em; width: 0.4rem; height: 0.4rem;
+  border-radius: 50%; background: var(--accent);
+}
+
 /* publications */
+.pubs-group {
+  font-size: var(--step-0); font-weight: 600; color: var(--muted);
+  padding-bottom: 0.6rem; border-bottom: 1px solid var(--rule); margin-bottom: -0.4rem;
+}
 .pubs { display: flex; flex-direction: column; gap: 0; }
+.pub h4 { margin: 0; }
 .pub { display: flex; flex-direction: column; gap: 0.4rem; padding-block: 1.4rem; border-bottom: 1px solid var(--rule); }
 .pub:first-child { padding-top: 0; }
 .pub:last-child { border-bottom: 0; }
@@ -242,7 +266,9 @@ body::before {
 .kind::before { content: ""; width: 0.55rem; height: 0.55rem; border-radius: 2px; background: currentColor; }
 .kind-journal { color: var(--accent); }
 .kind-conf { color: var(--ink); }
-.kind-data { color: var(--phys); }
+.kind-data { color: var(--signal); }
+.kind-review { color: var(--muted); }
+.kind-review::before { background: transparent; border: 1.5px solid currentColor; }
 .pub-state { color: var(--muted); }
 .pub-title { font-family: var(--font-text); font-size: 1.1875rem; font-weight: 600; line-height: 1.4; max-width: 42em; }
 .pub-authors { font-size: 0.9375rem; color: var(--muted); }
@@ -271,15 +297,6 @@ body::before {
   border: 1px solid var(--rule); border-radius: 6px; padding: 0.25rem 0.6rem; cursor: pointer;
 }
 .copy:hover { border-color: var(--accent); color: var(--accent); }
-
-/* label/value pairs: service, skills */
-.pairs { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 0.75rem 1.25rem; margin: 0; }
-.pairs dt { font-size: var(--step--1); color: var(--muted); padding-top: 0.1rem; }
-.pairs dd { margin: 0; }
-@media (max-width: 34rem) {
-  .pairs { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
-  .pairs dd + dt { margin-top: 0.75rem; }
-}
 
 /* contact */
 .email-line { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; }

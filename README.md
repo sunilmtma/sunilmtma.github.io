@@ -7,9 +7,8 @@ Plain HTML, CSS and JavaScript. There is no build step: GitHub Pages serves the 
 ```
 index.html                 all page content
 assets/css/style.css       design tokens (colours, fonts) at the top, then layout
-assets/js/main.js          point-cloud figure, copy buttons, nav highlight
+assets/js/main.js          digital twin figure, copy buttons, nav highlight
 assets/img/photo.jpg       portrait
-assets/docs/Sunil_Choudhary_CV.pdf
 .nojekyll                  tells GitHub Pages not to run Jekyll
 ```
 
@@ -31,7 +30,8 @@ assets/docs/Sunil_Choudhary_CV.pdf
 
 - **New paper:** copy one `<li class="pub">…</li>` block in `index.html`, edit it, and keep the list newest first.
 - **News item:** add a `<li>` at the top of the News list.
-- **New CV:** replace `assets/docs/Sunil_Choudhary_CV.pdf` with a file of the same name.
 - Then `git add . && git commit -m "Update" && git push`.
 
 Preview locally by opening `index.html` in a browser.
+
+The hero figure opens on a chosen stage when the address ends in `?stage=1` to `?stage=4`, for example https://sunilmtma.github.io/?stage=4.
