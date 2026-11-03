@@ -2,36 +2,25 @@
 
 Personal research page of Sunil Choudhary. Live at **https://sunilmtma.github.io**.
 
-Plain HTML, CSS and JavaScript. There is no build step: GitHub Pages serves the files as they are.
+Plain HTML and CSS, no build step and no JavaScript: GitHub Pages serves the files as they are.
 
 ```
-index.html                 all page content
-assets/css/style.css       design tokens (colours, fonts) at the top, then layout
-assets/js/main.js          digital twin figure, copy buttons, nav highlight
+index.html                 home page: photo, short bio, links, buttons to the other pages
+research/index.html        thesis and projects
+publications/index.html    papers, newest first
+teaching/index.html        courses and supervision
+activities/index.html      reviewing, talks and visits, fellowships and awards
+news/index.html            dated news items
+assets/css/style.css       all styling (colours at the top)
 assets/img/photo.jpg       portrait
 .nojekyll                  tells GitHub Pages not to run Jekyll
 ```
 
-## Publish it (first time)
-
-1. On GitHub, create a **public** repository named exactly `sunilmtma.github.io` (no README).
-2. From this folder:
-   ```
-   git init -b main
-   git add .
-   git commit -m "Personal page"
-   git remote add origin https://github.com/sunilmtma/sunilmtma.github.io.git
-   git push -u origin main
-   ```
-3. In the repository, open **Settings → Pages**, set *Source* to **Deploy from a branch**, branch `main`, folder `/ (root)`, and save.
-4. After a minute or two the site is live at https://sunilmtma.github.io.
-
 ## Update it
 
-- **New paper:** copy one `<li class="pub">…</li>` block in `index.html`, edit it, and keep the list newest first.
-- **News item:** add a `<li>` at the top of the News list.
-- Then `git add . && git commit -m "Update" && git push`.
+- **New paper:** copy one `<li>` block in `publications/index.html` and edit it.
+- **News item:** add a `<tr>` row at the top of the table in `news/index.html`.
+- **New page:** copy one of the folders, rename it, and add it to the menu in every page and to the buttons on the home page.
+- Then `git add . && git commit -m "Update" && git push`. The site updates within a minute or two.
 
 Preview locally by opening `index.html` in a browser.
-
-The hero figure opens on a chosen stage when the address ends in `?stage=1` to `?stage=4`, for example https://sunilmtma.github.io/?stage=4.
