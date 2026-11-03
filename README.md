@@ -8,11 +8,11 @@ Plain HTML and CSS, no build step and no JavaScript: GitHub Pages serves the fil
 index.html                 home page: photo, short bio, links, buttons to the other pages
 research/index.html        thesis and projects
 publications/index.html    papers, newest first
-teaching/index.html        courses and supervision
-activities/index.html      reviewing, talks and visits, fellowships and awards
+teaching/index.html        courses
+activities/index.html      supervision, reviewing, talks and visits, fellowships and awards
 news/index.html            dated news items
 assets/css/style.css       all styling (colours at the top)
-assets/img/photo.jpg       portrait
+assets/img/profile.jpg     portrait (square crop)
 .nojekyll                  tells GitHub Pages not to run Jekyll
 ```
 
