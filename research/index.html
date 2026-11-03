@@ -6,7 +6,10 @@
 <title>Research · Sunil Choudhary</title>
 <meta name="description" content="Research of Sunil Choudhary: 3D reconstruction and 6D camera pose refinement with radiance fields, on paired physical and digital twins of industrial environments.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233E7CA3'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='15' fill='%23FFFFFF'%3ESC%3C/text%3E%3C/svg%3E">
-<link rel="stylesheet" href="../assets/css/style.css?v=4">
+<link rel="alternate" hreflang="en" href="https://sunilmtma.github.io/research/">
+<link rel="alternate" hreflang="fr" href="https://sunilmtma.github.io/fr/research/">
+<link rel="stylesheet" href="../assets/css/style.css?v=5">
+<script src="../assets/js/site.js?v=5"></script>
 </head>
 <body>
 
@@ -20,6 +23,10 @@
       <li><a href="../activities/">Activities</a></li>
       <li><a href="../news/">News</a></li>
     </ul>
+    <div class="tools">
+      <a class="lang" href="../fr/research/" hreflang="fr" lang="fr" title="Version française">FR</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch between dark and light theme" title="Dark / light theme"><svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg><svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button>
+    </div>
   </nav>
 </header>
 
@@ -32,8 +39,8 @@
   <p>Within the FUSION project, I work on 3D reconstruction of industrial environments from paired physical and digital twins: the same scene and the same camera path, once recorded in the real world and once rendered in simulation.</p>
   <ul>
     <li><b>A paired physical/digital-twin dataset.</b> I built and released the first paired physical/digital-twin industrial RGB-D dataset. It was recorded with a stereo camera and a 16-camera OptiTrack motion-capture rig for millimetre-accurate ground truth, then replayed along the identical trajectory in a Unity digital twin. <a href="https://zenodo.org/records/20830059">[Dataset]</a></li>
-    <li><b>Benchmarking across the domain gap.</b> On this dataset I benchmark Structure-from-Motion back-ends and 3D Gaussian Splatting variants on both the real and the rendered data, to measure how far results obtained in simulation carry over to the real world (ICPR 2026 workshop; journal paper under review).</li>
-    <li><b>6D camera pose refinement.</b> I evaluate how robust 3D Gaussian Splatting-based camera pose refinement stays when the input images are degraded, on lightly textured industrial objects (IECON 2025).</li>
+    <li><b>Benchmarking across the domain gap.</b> On this dataset I benchmark Structure-from-Motion back-ends and 3D Gaussian Splatting variants on both the real and the rendered data, to measure how far results obtained in simulation carry over to the real world. ICPR 2026 workshop paper <a href="https://link.springer.com/chapter/10.1007/978-3-032-39518-4_8">[Springer]</a> <a href="https://hal.science/hal-05677254">[HAL]</a>; a journal paper is under review.</li>
+    <li><b>6D camera pose refinement.</b> I evaluate how robust 3D Gaussian Splatting-based camera pose refinement stays when the input images are degraded, on lightly textured industrial objects. IECON 2025 paper <a href="https://doi.org/10.1109/IECON58223.2025.11221686">[DOI]</a> <a href="https://hal.science/hal-05364587">[HAL]</a></li>
     <li><b>Hybrid reconstruction.</b> I develop pipelines that replace part of the real images with synthetic views from the digital twin, to reduce how much real data has to be captured on site (in preparation).</li>
     <li><b>Review.</b> A systematic review of camera and object 6D pose estimation by radiance-field inversion, and of the evidence for its industrial readiness (in preparation).</li>
   </ul>
