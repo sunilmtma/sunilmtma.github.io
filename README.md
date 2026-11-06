@@ -8,8 +8,8 @@ Plain HTML and CSS with no build step: GitHub Pages serves the files as they are
 index.html                 home page: photo, short bio, links, buttons to the other pages
 research/index.html        thesis and projects
 publications/index.html    papers, newest first
-teaching/index.html        courses
-activities/index.html      supervision, reviewing, talks and visits, fellowships and awards
+teaching/index.html        redirect to activities/#teaching (teaching now lives in Activities)
+activities/index.html      teaching, supervision, committees and reviewing, talks and visits, fellowships and awards
 news/index.html            dated news items
 fr/                        French version, same structure (fr/index.html, fr/research/, ...)
 assets/css/style.css       all styling (colours for both themes at the top)

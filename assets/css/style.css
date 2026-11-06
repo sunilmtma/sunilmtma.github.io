@@ -111,6 +111,13 @@ h1, h2, h3 { line-height: 1.25; }
 .pubs .title { font-weight: 600; }
 .pubs .links a { margin-right: 0.6rem; }
 
+/* courses on the activities page */
+.courses { list-style: none; padding: 0 !important; }
+.courses li { margin-bottom: 1.1rem; }
+.courses .title { font-weight: 600; }
+.courses .meta { margin: 0 0 0.2rem !important; }
+.page h3 + .courses { margin-top: 0.5rem; }
+
 /* dated tables: news, talks, awards */
 .dated { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
 .dated td { padding: 0.5rem 0.5rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
